@@ -33,5 +33,4 @@ jobs:
 
             - name: Push to dockerhub 
               run: |
-                docker tag web:latest uzairnaeem/django_demo_app:latest
                 docker-compose push uzairnaeem/django_demo_app:latest
