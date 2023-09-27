@@ -1,11 +1,11 @@
 FROM python:3
 
-WORKDIR /app
+ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt requirements.txt
+RUN mkdir /api
+
+WORKDIR /api
+
+ADD . /api/
 
 RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["python", "app.py"]
