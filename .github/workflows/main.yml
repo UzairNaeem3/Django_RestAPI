@@ -26,7 +26,7 @@ jobs:
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
             - name: Build the Stack       # build the docker image
-              run: docker-compose -f docker-compose.yml build web
+              run: docker-compose -f docker-compose.yml build --tag uzairnaeem/django_demo_app:latest web
 
             - name: Get docker logs
               run: docker-compose logs
