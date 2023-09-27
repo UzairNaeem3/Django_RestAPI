@@ -31,4 +31,4 @@ jobs:
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
             - name: Push to dockerhub 
-              run: docker-compose push # this pushes the  image to the repo that we have defined in the docker-compose.yml file.
+              run: docker-compose push 
