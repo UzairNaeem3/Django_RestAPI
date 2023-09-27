@@ -6,7 +6,7 @@ on:
           - main
 
 jobs:
-    testing-docker-compose:
+    push_to_registry:
         name: Push Docker Image to Docker Hub
         runs-on: ubuntu-latest           # specify the build machine
         steps:
