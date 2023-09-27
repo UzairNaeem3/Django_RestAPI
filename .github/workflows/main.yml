@@ -33,4 +33,4 @@ jobs:
 
             - name: Push to dockerhub 
               run: |
-                docker-compose push uzairnaeem/django_demo_app:latest
+                docker buildx push uzairnaeem/django_demo_app:latest
