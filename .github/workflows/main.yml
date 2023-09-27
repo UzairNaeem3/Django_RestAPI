@@ -32,4 +32,4 @@ jobs:
               run: docker-compose logs
 
             - name: Push to dockerhub 
-              run: docker-compose push app # push only the app service image
+              run: docker-compose push
