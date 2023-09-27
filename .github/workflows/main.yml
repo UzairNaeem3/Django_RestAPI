@@ -33,4 +33,13 @@ jobs:
 
             - name: Push to dockerhub     # push the image to Docker Hub using docker-compose
               run: docker-compose -f docker-compose.yml push
-                
+
+            - name: List Docker Images Before Build
+              run: docker images
+            
+            - name: Build the Docker Image
+              run: docker-compose -f docker-compose.yml build
+            
+            - name: List Docker Images After Build
+              run: docker images
+            
