@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    container_name: drinks_api
     volumes:
       - .:/api
     ports:
