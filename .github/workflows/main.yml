@@ -25,12 +25,12 @@ jobs:
                 username: ${{ secrets.DOCKER_USERNAME }}
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
-            - name: Build the Stack       # build the docker image
-              run: docker-compose -f docker-compose.yml build --tag uzairnaeem/django_demo_app:latest web
+            # - name: Build the Stack       # build the docker image
+            #   run: docker-compose -f docker-compose.yml build --tag uzairnaeem/django_demo_app:latest web
 
             - name: Get docker logs
               run: docker-compose logs
 
             - name: Push to dockerhub 
               run: |
-                docker buildx push uzairnaeem/django_demo_app:latest
+                docker buildx build --platform linux/amd64 --push -t uzairnaeem/django_demo_app:latest .
